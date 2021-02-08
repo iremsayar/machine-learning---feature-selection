@@ -1,9 +1,9 @@
 
-srcFiles = dir('C:\Users\›rem SAYAR\Desktop\ml\features\lichenplanus\*.jpg');  % the folder in which ur images exists
+srcFiles = dir('C:\Users\√ùrem SAYAR\Desktop\ml\features\lichenplanus\*.jpg');  % the folder in which ur images exists
 
 for i = 1 : length(srcFiles)
     
-    filename = strcat('C:\Users\›rem SAYAR\Desktop\ml\features\lichenplanus\',srcFiles(i).name);
+    filename = strcat('C:\Users\√ùrem SAYAR\Desktop\ml\features\lichenplanus\',srcFiles(i).name);
  
     I = imread(filename);
     [w,h]=size(I);
@@ -15,9 +15,8 @@ for i = 1 : length(srcFiles)
 R_av = (sum(sum(R))) / (w*h);
 G_av = (sum(sum(G))) / (w*h);
 B_av = (sum(sum(B))) / (w*h);
-top = R_av + G_av + B_av;
-mean = top/3;
-    x = [R_av G_av B_av top mean];
+
+    x = [R_av G_av B_av ];
 
     featureslichen(i,:) = x;
     
