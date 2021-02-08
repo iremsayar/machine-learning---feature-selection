@@ -12,12 +12,12 @@ for i = 1 : length(srcFiles)
     G = I(:,:,2);
     B = I(:,:,3);
 
-R_av = (sum(sum(R))) / (w*h);
+R_av = (sum(sum(R))) / (w*h); 
 G_av = (sum(sum(G))) / (w*h);
 B_av = (sum(sum(B))) / (w*h);
 
-    x = [R_av G_av B_av ];
+    x = [R_av G_av B_av ]; % features selection
 
-    featureslichen(i,:) = x;
+    features(i,:) = x;
     
 end
